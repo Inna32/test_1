@@ -1,0 +1,1666 @@
+{
+	"info": {
+		"_postman_id": "beedc6f7-ecb4-466d-8783-0e775668422e",
+		"name": "Studing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Authorization",
+					"item": [
+						{
+							"name": "Site",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sign Up",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "39ae4239-f951-434a-903f-71cd183c27fb",
+										"exec": [
+											"pm.environment.set(\"user-pass\", pm.variables.replaceIn('{{$randomPassword}}'));"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "d2371bc4-ab4f-4e87-9b2f-7b03037fb9ab",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "{{$randomFirstName}}",
+											"type": "text"
+										},
+										{
+											"key": "surname",
+											"value": "{{$randomLastName}}",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "{{$randomEmail}}",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "{{\"user-pass\"}}",
+											"type": "text"
+										},
+										{
+											"key": "confirm password",
+											"value": "{{\"user-pass\"}}",
+											"type": "text"
+										},
+										{
+											"key": "term",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/sign_up",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"sign_up"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Profile Info",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "6de03b41-096f-4825-8dd7-29b86c8e9f84",
+										"exec": [
+											"pm.environment.set(\"user-pass\", pm.variables.replaceIn('{{$randomPassword}}'));"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user11@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"login"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Count",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "62def8db-4a08-4469-9e06-e03a6e1b7215",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "58002bfb-ba1b-4a6d-aafa-e7747de2c25f",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "User Profile",
+					"item": [
+						{
+							"name": "Upload Image",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Info",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "87a87523-6d1d-4b15-9f7b-4c6286c9962e",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "fcd7f981-65ab-4b33-a326-2f6a5049108e",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Admin",
+			"item": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Instructor",
+			"item": [
+				{
+					"name": "Instructor Authorization",
+					"item": [
+						{
+							"name": "Course",
+							"item": [
+								{
+									"name": "Instructor Log In",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "47d1bd4f-0102-4bd2-80b5-0ae0b3be6b58",
+												"exec": [
+													"pm.environment.set(\"user-pass\", pm.variables.replaceIn('{{$randomPassword}}'));"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "21f9be9a-7bbd-43a9-8f3d-1e33aa627f5d",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{user-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "first_name",
+													"value": "{{$randomFirstName}}",
+													"type": "text"
+												},
+												{
+													"key": "last_name",
+													"value": "{{$randomLastName}}",
+													"type": "text"
+												},
+												{
+													"key": "email",
+													"value": "{{$randomEmail}}",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "{{\"user-pass\"}}",
+													"type": "text"
+												},
+												{
+													"key": "password_confirmation",
+													"value": "{{\"user-pass\"}}",
+													"type": "text"
+												},
+												{
+													"key": "term",
+													"value": "true",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/sign_up",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"sign_up"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "List",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "131f9024-8b77-42da-85e3-824b21cc5c17",
+												"exec": [
+													"var jsonData = pm.response.json();",
+													" categoriesIDs = [];",
+													" jsonData.forEach(function(post){",
+													"categoriesIds.add(post.id);",
+													"} );",
+													"pm.environment.set(\"categoriesIDs\", categoriesIDs);"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/category/list",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"category",
+												"list"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Company",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": ""
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create Category",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{instructor-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name_category",
+													"value": "Good course",
+													"type": "text"
+												},
+												{
+													"key": "industry_id",
+													"value": "1",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/category/create",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"category",
+												"create"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "List 2",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "70ec7a02-858b-4683-b334-8601ad5253a3",
+												"exec": [
+													"var jsonData = pm.response.json();",
+													" categoriesIDs = [];",
+													" jsonData.forEach(function(post){",
+													"categoriesIds.add(post.id);",
+													"} );",
+													"pm.environment.set(\"categoriesIDs\", categoriesIDs);"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/category/list",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"category",
+												"list"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create industry",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": ""
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get category list",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": ""
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Upload Image",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{instructor-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "image",
+													"type": "file",
+													"src": "/Users/admin/Downloads/club-deportivo-magallanes-chile-seeklogo.com.svg"
+												},
+												{
+													"key": "thumb_image",
+													"type": "file",
+													"src": "/Users/admin/Downloads/club-deportivo-magallanes-chile-seeklogo.com.svg"
+												}
+											],
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/image/upload",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"image",
+												"upload"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Upload Video",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "5b8628d9-0918-4b12-8afb-353734cab72c",
+												"exec": [
+													"var jsonData = pm.response.json();",
+													"pm.environment.set(\"link_thumb\", jsonData.link_thumb);",
+													"pm.environment.set(\"file\", jsonData.link_file);"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{instructor-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "link_thumb",
+													"type": "file",
+													"src": "/Users/admin/Desktop/[FreeCourseLab.com] Udemy - Selenium WebDriver With Python 3.x - Novice To Ninja/11. Working With Files/2. How To Read A File.mp4"
+												},
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/Users/admin/Desktop/[FreeCourseLab.com] Udemy - Selenium WebDriver With Python 3.x - Novice To Ninja/11. Working With Files/2. How To Read A File.mp4"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/video/upload",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"video",
+												"upload"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create Course First",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{instructor-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title",
+													"value": "Good Course",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"type": "file",
+													"src": "/Users/admin/Downloads/6a04c4d851f5d7ad5c6ac01b9f66df21.jpg",
+													"disabled": true
+												},
+												{
+													"key": "industry_id",
+													"value": "21",
+													"type": "text"
+												},
+												{
+													"key": "level",
+													"value": "beginner",
+													"type": "text"
+												},
+												{
+													"key": "thumb_image",
+													"type": "file",
+													"src": "/Users/admin/Downloads/action-action-energy-american-football-906073.jpg",
+													"disabled": true
+												},
+												{
+													"key": "video_cover",
+													"type": "file",
+													"src": "/Users/admin/Downloads/Video.mp4",
+													"disabled": true
+												},
+												{
+													"key": "description",
+													"value": "dfdlfgf;hkgj;hkjhk",
+													"type": "text"
+												},
+												{
+													"key": "categories_id",
+													"value": "2",
+													"type": "text"
+												},
+												{
+													"key": "lang",
+													"value": "eng",
+													"type": "text"
+												},
+												{
+													"key": "privacy",
+													"value": "public",
+													"type": "text"
+												},
+												{
+													"key": "owner_type",
+													"value": "company",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/course/create",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"course",
+												"create"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "4d6519b4-b729-4d3f-bc86-2f8a9cac3589",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "ecebabbb-5e44-49d3-b300-a3a049c90cec",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.expect(pm.response.code).to.be.oneOf([200,201,202]);",
+											"});"
+										]
+									}
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Second Step",
+							"item": [
+								{
+									"name": "Dashboard Update",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": ""
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "List Course",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "14d8e141-6c6e-4925-a3c7-60d31fd6b5a1",
+												"exec": [
+													"var jsonData = pm.response.json();",
+													"    pm.environment.set(\"module_id\", jsonData.id);"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/course/module/list?course_id={{course-id}}",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"course",
+												"module",
+												"list"
+											],
+											"query": [
+												{
+													"key": "course_id",
+													"value": "{{course-id}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Upload Video",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "cd7df623-90b3-4a76-8607-dd12fefb2371",
+												"exec": [
+													"var jsonData = pm.response.json();",
+													"pm.environment.set(\"videofile\", jsonData.link);    "
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{instructor-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "course_id",
+													"value": "{{course-id}}",
+													"type": "text"
+												},
+												{
+													"key": "title",
+													"value": "Video",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "expected_time",
+													"value": "100",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "article",
+													"value": "Name",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/Users/admin/Desktop/[FreeCourseLab.com] Udemy - Selenium WebDriver With Python 3.x - Novice To Ninja/11. Working With Files/1. How To Write Data To A File.mp4"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/files/upload",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"files",
+												"upload"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create Video lesson",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{instructor-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "course_id",
+													"value": "{{course-id}}",
+													"type": "text"
+												},
+												{
+													"key": "title",
+													"value": "Video lesson",
+													"type": "text"
+												},
+												{
+													"key": "article",
+													"value": "Very nice video",
+													"type": "text"
+												},
+												{
+													"key": "files",
+													"value": "{{file}}",
+													"type": "text"
+												},
+												{
+													"key": "expected_time",
+													"value": "30",
+													"type": "text"
+												},
+												{
+													"key": "module_id",
+													"value": "411",
+													"type": "text"
+												},
+												{
+													"key": "type",
+													"value": "video",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/article/create",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"article",
+												"create"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Upload PDF",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "af09df2e-7a62-4a22-842d-d8efe561d095",
+												"exec": [
+													"var jsonData = pm.response.json();",
+													"pm.environment.set(\"videofile\", jsonData.link);    "
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{instructor-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "course_id",
+													"value": "{{course-id}}",
+													"type": "text"
+												},
+												{
+													"key": "title",
+													"value": "Video",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "expected_time",
+													"value": "100",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "article",
+													"value": "Name",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/Users/admin/Desktop/[FreeCourseLab.com] Udemy - Selenium WebDriver With Python 3.x - Novice To Ninja/11. Working With Files/1. How To Write Data To A File.mp4"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/files/upload",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"files",
+												"upload"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create PDF lesson",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{instructor-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "course_id",
+													"value": "{{course-id}}",
+													"type": "text"
+												},
+												{
+													"key": "title",
+													"value": "Video lesson",
+													"type": "text"
+												},
+												{
+													"key": "article",
+													"value": "Very nice video",
+													"type": "text"
+												},
+												{
+													"key": "files",
+													"value": "{{file}}",
+													"type": "text"
+												},
+												{
+													"key": "expected_time",
+													"value": "30",
+													"type": "text"
+												},
+												{
+													"key": "module_id",
+													"value": "411",
+													"type": "text"
+												},
+												{
+													"key": "type",
+													"value": "video",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/article/create",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"article",
+												"create"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Remove PDF lesson",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{instructor-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/course/event/delete?status=true&course_id={{course-id}}&module_id={{module_id}}&event_id={{event_id}}&type=article",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"course",
+												"event",
+												"delete"
+											],
+											"query": [
+												{
+													"key": "status",
+													"value": "true"
+												},
+												{
+													"key": "course_id",
+													"value": "{{course-id}}"
+												},
+												{
+													"key": "module_id",
+													"value": "{{module_id}}"
+												},
+												{
+													"key": "event_id",
+													"value": "{{event_id}}"
+												},
+												{
+													"key": "type",
+													"value": "article"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get form the list",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": ""
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create lesson from the list",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{instructor-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "course_id",
+													"value": "{{course-id}}",
+													"type": "text"
+												},
+												{
+													"key": "title",
+													"value": "List lesson",
+													"type": "text"
+												},
+												{
+													"key": "article",
+													"value": "How to",
+													"type": "text"
+												},
+												{
+													"key": "files",
+													"value": "{{article -id}}",
+													"type": "text"
+												},
+												{
+													"key": "expected_time",
+													"value": "30",
+													"type": "text"
+												},
+												{
+													"key": "module_id",
+													"value": "411",
+													"type": "text"
+												},
+												{
+													"key": "type",
+													"value": "article",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/article/create",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"article",
+												"create"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Check Event",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": ""
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Create Webinar",
+							"item": [
+								{
+									"name": "Limit",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": ""
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Upload Media",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{instructor-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "image",
+													"type": "file",
+													"src": "/Users/admin/Downloads/06_Recap_web_2018_g6-1170x650.jpg"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/image/upload",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"image",
+												"upload"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add Webinar",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{instructor-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"course_id\":{{course-id}},\n  \"module_id\":{{module_id}},\n  \"title\":\"webinar1\",\n  \"date_from\":\"2020-05-19\",\n  \"description\":\"test\",\n  \"duration\":3600,\n  \"timezone\":\"ua\",\n  \"start_time\":\"18:22:22\",\n  \"timezone_region\":\"Europe/Kiev\",\n  \"type\":\"webinar\",\n  \"files_id\":[\n    {\n      \"id\":1,\n      \"type\":\"public\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/event/create",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"event",
+												"create"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Invite Instructor",
+							"item": [
+								{
+									"name": "Invite",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{instructor-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{  \"param_invite\":[\n                  {\"course_id\":{{course-id}},\n                   \"module_id\":{{module_id}},\n                   \"event_id\":1,\n                   \"email\":{{email}},\n                   \"type\":\"article\"\n   }\n    \n  ]\n}\n\t\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/course/invite/lecture",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"course",
+												"invite",
+												"lecture"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Add Quiz",
+							"item": [
+								{
+									"name": "Create category",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{instructor-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"category_name\":\"quiz category\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/quiz/category/create",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"category",
+												"create"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add Quiz",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{instructor-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"course_id\":{{course-id}},\n    \"module_id\":{{module_id}},\n    \"title\":\"test quidsfsdfsdfsdz\",\n    \"date_from\":\"2020-05-11\",\n    \"date_to\":\"2022-05-11\",\n    \"difficulty\":\"beginner\",\n    \"detailed_result\":true,\n    \"time_limit\":3600,\n    \"attempts\":3,\n    \"order_question\":\"random\",\n    \"point\":12,\n    \"q_point\":3,\n    \"description\":\"tets trvvjgvskjdfvsclfghsdkjgcjbh\",\n    \"question\":[{\"name\":\"How are you?\"}],\n    \"question_id\":[]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/quiz/create",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"quiz",
+												"create"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add Open Question Quiz",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": ""
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Module",
+							"item": [
+								{
+									"name": "Create Module",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{instructor-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/course/module/create?course_id={{course-id}}&title=Test",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"course",
+												"module",
+												"create"
+											],
+											"query": [
+												{
+													"key": "course_id",
+													"value": "{{course-id}}"
+												},
+												{
+													"key": "title",
+													"value": "Test"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Remove module",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{instructor-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/course/module/delete?course_id={{course-id}}&module_id={{module_id}}",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"course",
+												"module",
+												"delete"
+											],
+											"query": [
+												{
+													"key": "course_id",
+													"value": "{{course-id}}"
+												},
+												{
+													"key": "module_id",
+													"value": "{{module_id}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Change lessons order",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{instructor-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"course_id\":{{course-id}},\n  \"attributes\":[\n    { \"order_id\":1},\n      { \"order_id\":3},\n    { \"order_id\":2}\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/module/lessons/order/update",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"module",
+												"lessons",
+												"order",
+												"update"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Third Step",
+							"item": [
+								{
+									"name": "Add Category",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": ""
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Invite User",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "f5bbdd9e-5233-4705-b3b1-70c05cd72d5f",
+												"exec": [
+													"pm.environment.set(\"email\", pm.variables.replaceIn('{{$randomEmail}}'));"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{instructor-token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "status",
+													"value": "true",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/user/invite/course?course_id={{course-id}}&email={{email}}&status=true",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"user",
+												"invite",
+												"course"
+											],
+											"query": [
+												{
+													"key": "course_id",
+													"value": "{{course-id}}"
+												},
+												{
+													"key": "email",
+													"value": "{{email}}"
+												},
+												{
+													"key": "status",
+													"value": "true"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Course publish",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": ""
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

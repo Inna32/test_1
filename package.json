@@ -1,0 +1,13 @@
+{
+  "name": "studying",
+  "version": "1.0.0",
+  "description": "Test project",
+  "main": "index.js",
+  "scripts": {
+    "api-tests": "newman run Studing.postman_collection.json -e Courses.postman_environment.json"
+  },
+  "author": "Inna",
+  "dependencies": {
+    "newman": "^5.1.0"
+  }
+}
